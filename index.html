@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- styles -->
+    <link rel="stylesheet" href="_css/AOIdraw.css">
+    
+    <!-- scripts -->
+    <script type="text/javascript" src="_js/jquery-1.7.1.js"></script>
+    <script type="text/javascript" src="_js/p5.js"></script>
+    <script type="text/javascript" src="_js/p5.dom.js"></script>
+    
+    <!-- Task script -->
+    <script type="text/javascript" src="_js/AOIdrawing.js"></script>
+    
+    
+</head>
+<body>
+    
+    <!-- Config Settings -->
+    <div id="settingsDiv">
+        <div id="formInputs">
+            <form>
+                Initials:
+                <input id="id_input" type="text" name="subjID" value=""><br>
+                Starting Image:
+                <input id="num_input" type="text" name="ImageNum" value="1" style="width: 50px">
+            </form>
+            <p><a href="javascript:initSettings()" id="initSettings"><b>Begin</b></a></p>
+        </div>
+    </div>
+    
+    <div id="middleContent">
+        <h3 id="imageNumLabel">Image: </h3>
+        <!-- Canvas -->
+        <div id="canvasDiv">
+            <div id="imageContainer">
+            </div>
+        </div>
+
+        <!-- AOI Instructions -->
+        <div id="AOIDiv">
+            <p>Please draw:</p>
+            <p id="AOIname"></p>
+            <img id="AOIguide" src="">
+        </div>
+
+        <!-- Image Controls -->
+        <div id="imageControlsDiv" -->
+            <p> </p><br><br>
+            AOI N/A: 
+            <input type="checkbox" id="invalidAOI"><br><br>
+            brush size:  
+            <input type="range" id="brushSizeRange" value="50">
+            <p><a href="javascript:resetBrush()" id="resetButton"><b>Clear AOI</b></a></p>
+            <p><a href="javascript:nextAOI()" id="nextButton"><b>Next AOI</b></a></p>
+        </div>
+        
+    </div>
+        
+    
+    
+</body>
+
+
+
+</html>
